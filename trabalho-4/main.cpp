@@ -4,18 +4,10 @@
 #include <GL/glu.h>
 #include <math.h>
 
-// ==========================================
-// VARIAVEIS DA JANELA
-// ==========================================
-
 HDC hDC;
 HGLRC hRC;
 HWND hWnd;
 HINSTANCE hInstance;
-
-// ==========================================
-// DESENHAR UM CUBO
-// ==========================================
 
 void desenharCubo(float x, float y, float z,
                   float largura, float altura, float profundidade)
@@ -27,21 +19,18 @@ void desenharCubo(float x, float y, float z,
 
     glBegin(GL_QUADS);
 
-    // Frente
     glColor3f(0.65f, 0.40f, 0.20f);
     glVertex3f(-0.5f, -0.5f,  0.5f);
     glVertex3f( 0.5f, -0.5f,  0.5f);
     glVertex3f( 0.5f,  0.5f,  0.5f);
     glVertex3f(-0.5f,  0.5f,  0.5f);
 
-    // Tras
     glColor3f(0.45f, 0.28f, 0.14f);
     glVertex3f(-0.5f, -0.5f, -0.5f);
     glVertex3f(-0.5f,  0.5f, -0.5f);
     glVertex3f( 0.5f,  0.5f, -0.5f);
     glVertex3f( 0.5f, -0.5f, -0.5f);
 
-    // Esquerda
     glColor3f(0.55f, 0.33f, 0.16f);
     glVertex3f(-0.5f, -0.5f, -0.5f);
     glVertex3f(-0.5f, -0.5f,  0.5f);
